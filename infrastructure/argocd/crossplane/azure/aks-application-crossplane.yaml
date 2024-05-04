@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: aks-provision-crossplane
+  name: aks-by-crossplane
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io   
 spec:
   project: default
   source:
-    repoURL: https://github.com/hoanglecao/argocd-crossplane.git
+    repoURL: https://github.com/Jack20001413/crossplane-handson.git
     targetRevision: HEAD
     path: ./infrastructure/argocd/crossplane/azure
   destination:

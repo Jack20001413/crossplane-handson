@@ -1,13 +1,13 @@
 apiVersion: network.azure.upbound.io/v1beta1
 kind: VirtualNetwork
 metadata:
-  name: vn-crossplane
+  name: crossplane-dev-sea-vnet
 spec:
   providerConfigRef:
     name: azure-provider
   forProvider:
     resourceGroupNameRef:
-      name: crossplane-rg
-    location: Central US
+      name: crossplane-dev-sea-rg
+    location: Southeast Asia
     addressSpace:
       - 10.2.0.0/16

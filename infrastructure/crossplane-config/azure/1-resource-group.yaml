@@ -1,11 +1,11 @@
 apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
-  name: crossplane-rg-245
+  name: crossplane-dev-sea-rg
 spec:
   providerConfigRef:
     name: azure-provider  # This line points to your specific ProviderConfig
   forProvider:
-    location: Central US
+    location: Southeast Asia
     tags:
       provisioner: crossplane
