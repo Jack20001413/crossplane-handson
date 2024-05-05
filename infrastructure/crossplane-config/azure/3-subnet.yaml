@@ -1,7 +1,7 @@
 apiVersion: network.azure.upbound.io/v1beta1
 kind: Subnet
 metadata:
-  name: sub-crossplane
+  name: aks-subnet
 spec:
   providerConfigRef:
     name: azure-provider
@@ -9,6 +9,6 @@ spec:
     addressPrefixes:
       - 10.2.0.0/24
     resourceGroupNameRef:
-      name: crossplane-rg
+      name: crossplane-dev-sea-rg
     virtualNetworkNameRef:
-      name: vn-crossplane
+      name: crossplane-dev-sea-vnet

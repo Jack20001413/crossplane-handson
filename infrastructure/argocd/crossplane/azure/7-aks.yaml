@@ -1,7 +1,7 @@
 apiVersion: containerservice.azure.upbound.io/v1beta1
 kind: KubernetesCluster
 metadata:
-  name: aks-crossplane
+  name: crossplane-dev-sea-aks
   annotations:
     argocd.argoproj.io/sync-wave: "7"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
@@ -14,10 +14,10 @@ spec:
         nodeCount: 1
         vmSize: Standard_D2_v2
         vnetSubnetIdRef:
-          name: sub-crossplane
+          name: aks-subnet
     dnsPrefix: aks
     identity:
       - type: SystemAssigned
-    location: Central US
+    location: Southeast Asia
     resourceGroupNameRef:
-      name: crossplane-rg-aks
+      name: crossplane-dev-sea-rg

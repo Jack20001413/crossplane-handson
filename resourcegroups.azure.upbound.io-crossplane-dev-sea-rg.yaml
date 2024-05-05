@@ -1,0 +1,52 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  annotations:
+    crossplane.io/external-create-pending: "2024-05-05T04:20:51Z"
+    crossplane.io/external-create-succeeded: "2024-05-05T04:20:51Z"
+    crossplane.io/external-name: crossplane-dev-sea-rg
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"azure.upbound.io/v1beta1","kind":"ResourceGroup","metadata":{"annotations":{},"name":"crossplane-dev-sea-rg"},"spec":{"forProvider":{"location":"Southeast Asia","tags":{"provisioner":"crossplane"}},"providerConfigRef":{"name":"azure-provider"}}}
+  creationTimestamp: "2024-05-05T04:20:48Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2024-05-05T07:20:28Z"
+  finalizers:
+  - finalizer.managedresource.crossplane.io 
+  generation: 3
+  name: crossplane-dev-sea-rg
+  resourceVersion: "145590"
+  uid: db21e1ce-f42a-4380-b0f3-951093091869
+spec:
+  deletionPolicy: Delete
+  forProvider:
+    location: Southeast Asia
+    tags:
+      provisioner: crossplane
+  initProvider: {}
+  managementPolicies:
+  - '*'
+  providerConfigRef:
+    name: azure-provider
+status:
+  atProvider:
+    id: /subscriptions/fb4000dd-304d-47d3-95c7-f5f9d4f74481/resourceGroups/crossplane-dev-sea-rg
+    location: southeastasia
+    managedBy: ""
+    tags:
+      provisioner: crossplane
+  conditions:
+  - lastTransitionTime: "2024-05-05T04:20:52Z"
+    reason: Available
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2024-05-05T05:50:50Z"
+    message: 'connect failed: cannot initialize the Terraform plugin SDK async external
+      client: cannot get terraform setup: cannot get referenced ProviderConfig: ProviderConfig.azure.upbound.io
+      "azure-provider" not found'
+    reason: ReconcileError
+    status: "False"
+    type: Synced
+  - lastTransitionTime: "2024-05-05T04:20:51Z"
+    reason: Success
+    status: "True"
+    type: LastAsyncOperation

@@ -1,7 +1,7 @@
 apiVersion: network.azure.upbound.io/v1beta1
-kind: Subnet
+kind: VirtualNetwork
 metadata:
-  name: sub-crossplane
+  name: crossplane-dev-sea-vnet
   annotations:
     argocd.argoproj.io/sync-wave: "5"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
@@ -9,9 +9,8 @@ spec:
   providerConfigRef:
     name: azure-provider
   forProvider:
-    addressPrefixes:
-      - 10.2.0.0/24
     resourceGroupNameRef:
-      name: crossplane-rg-aks
-    virtualNetworkNameRef:
-      name: vn-crossplane
+      name: crossplane-dev-sea-rg
+    location: Southeast Asia
+    addressSpace:
+      - 10.2.0.0/16
