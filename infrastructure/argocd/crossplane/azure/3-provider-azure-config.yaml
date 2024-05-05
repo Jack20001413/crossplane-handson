@@ -10,7 +10,7 @@ spec:
     source: Secret
     secretRef:
       namespace: crossplane-system
-      name: azure-creds
-      key: creds
-      # name: azure-sdk-secret
-      # key: azure-sdk-secret.json
+      # name: azure-creds
+      # key: creds
+      name: azure-sdk-secret
+      key: azure-sdk-secret.json
